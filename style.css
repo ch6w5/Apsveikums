@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    margin: 0; 
+}
+body{
+    overflow: hidden;
+    background-image: url(background.png)
+}
+
+.santa {
+    width: 300px;
+    animation-name: movingSanta;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+    position: relative;
+}
+
+@keyframes movingSanta {
+    0% {
+        left: -300px;
+    }
+    10%, 30%, 50%, 70%, 90% {
+        transform: rotate(10deg);
+    }
+    20%, 40%, 60%, 80% {
+        transform: rotate(-10deg);
+    }
+    100% {
+        transform: rotate(-10deg);
+        left: 100%;
+    }
+}
